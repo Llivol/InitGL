@@ -1,0 +1,8 @@
+/home/llivol/Documentos/InitGL/build/CMakeFiles/rebuild_cache.dir
+/home/llivol/Documentos/InitGL/build/CMakeFiles/InitGL.dir
+/home/llivol/Documentos/InitGL/build/CMakeFiles/edit_cache.dir
+/home/llivol/Documentos/InitGL/build/libraries/glfw/CMakeFiles/rebuild_cache.dir
+/home/llivol/Documentos/InitGL/build/libraries/glfw/CMakeFiles/edit_cache.dir
+/home/llivol/Documentos/InitGL/build/libraries/glfw/src/CMakeFiles/rebuild_cache.dir
+/home/llivol/Documentos/InitGL/build/libraries/glfw/src/CMakeFiles/glfw.dir
+/home/llivol/Documentos/InitGL/build/libraries/glfw/src/CMakeFiles/edit_cache.dir
