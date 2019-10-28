@@ -7,6 +7,30 @@
 
 {
   "directory": "/home/llivol/Documentos/github/InitGL/build",
+  "command": "/usr/bin/g++-7   -I../source -I../libraries/glfw/include  -g   -std=gnu++1z -o CMakeFiles/InitGL.dir/source/Game.cpp.o -c /home/llivol/Documentos/github/InitGL/source/Game.cpp",
+  "file": "/home/llivol/Documentos/github/InitGL/source/Game.cpp"
+},
+
+{
+  "directory": "/home/llivol/Documentos/github/InitGL/build",
+  "command": "/usr/bin/g++-7   -I../source -I../libraries/glfw/include  -g   -std=gnu++1z -o CMakeFiles/InitGL.dir/source/linmath.cpp.o -c /home/llivol/Documentos/github/InitGL/source/linmath.cpp",
+  "file": "/home/llivol/Documentos/github/InitGL/source/linmath.cpp"
+},
+
+{
+  "directory": "/home/llivol/Documentos/github/InitGL/build",
+  "command": "/usr/bin/g++-7   -I../source -I../libraries/glfw/include  -g   -std=gnu++1z -o CMakeFiles/InitGL.dir/source/Shader.cpp.o -c /home/llivol/Documentos/github/InitGL/source/Shader.cpp",
+  "file": "/home/llivol/Documentos/github/InitGL/source/Shader.cpp"
+},
+
+{
+  "directory": "/home/llivol/Documentos/github/InitGL/build",
+  "command": "/usr/bin/g++-7   -I../source -I../libraries/glfw/include  -g   -std=gnu++1z -o CMakeFiles/InitGL.dir/source/Texture.cpp.o -c /home/llivol/Documentos/github/InitGL/source/Texture.cpp",
+  "file": "/home/llivol/Documentos/github/InitGL/source/Texture.cpp"
+},
+
+{
+  "directory": "/home/llivol/Documentos/github/InitGL/build",
   "command": "/usr/bin/gcc-7 -D_GLFW_USE_CONFIG_H -I../libraries/glfw/include -I../libraries/glfw/src -Ilibraries/glfw/src  -g -fPIC   -Wall -Wdeclaration-after-statement -o libraries/glfw/src/CMakeFiles/glfw.dir/context.c.o   -c /home/llivol/Documentos/github/InitGL/libraries/glfw/src/context.c",
   "file": "/home/llivol/Documentos/github/InitGL/libraries/glfw/src/context.c"
 },

@@ -20,3 +20,9 @@
 2	1104	1572276581	libraries/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o	d10005b45c1372b7
 572	1145	1572276581	libraries/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o	71fe0b1881ddaac1
 583	1115	1572276581	libraries/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o	a0a7c6cdd2eb5f66
+0	73	1572277611	build.ninja	a811f411580b65ba
+2	466	1572277612	CMakeFiles/InitGL.dir/source/linmath.cpp.o	6b80bfdaa5d81d52
+2	1045	1572277612	CMakeFiles/InitGL.dir/source/Texture.cpp.o	e4689214b1d01f07
+2	1167	1572277612	CMakeFiles/InitGL.dir/source/Game.cpp.o	ac75a904b5b0e7be
+2	1284	1572277612	CMakeFiles/InitGL.dir/source/Shader.cpp.o	8db416ff42899dbc
+1284	1483	1572277613	InitGL	9e8d5a9a42e9d0f6
