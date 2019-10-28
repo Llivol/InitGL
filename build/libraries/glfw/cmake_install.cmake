@@ -1,4 +1,4 @@
-# Install script for directory: /home/llivol/Documentos/InitGL/libraries/glfw
+# Install script for directory: /home/llivol/Documentos/github/InitGL/libraries/glfw
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/llivol/Documentos/InitGL/build/libraries/glfw/src/cmake_install.cmake")
+  include("/home/llivol/Documentos/github/InitGL/build/libraries/glfw/src/cmake_install.cmake")
 
 endif()
 
