@@ -26,3 +26,5 @@
 2	1167	1572277612	CMakeFiles/InitGL.dir/source/Game.cpp.o	ac75a904b5b0e7be
 2	1284	1572277612	CMakeFiles/InitGL.dir/source/Shader.cpp.o	8db416ff42899dbc
 1284	1483	1572277613	InitGL	9e8d5a9a42e9d0f6
+1	1496	1572277822	CMakeFiles/InitGL.dir/source/main.cpp.o	71280fe0b3d11149
+1496	1797	1572277823	InitGL	9e8d5a9a42e9d0f6
