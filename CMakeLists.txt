@@ -8,6 +8,9 @@ set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries")
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/source")
 set(SOURCES
 	"${SRC_DIR}/main.cpp"
+	"${SRC_DIR}/Game.cpp"
+	"${SRC_DIR}/linmath.cpp"
+	"${SRC_DIR}/Shader.cpp"
 	)
 
 # C++ Version
@@ -22,6 +25,10 @@ target_include_directories(${PROJECT_NAME} PRIVATE "${SRC_DIR}")
 find_package(OpenGL REQUIRED)
 target_include_directories(${PROJECT_NAME} PUBLIC ${OPENGL_INCLUDE_DIR})
 target_link_libraries(${PROJECT_NAME} ${OPENGL_gl_LIBRARY})
+
+#GLEW
+find_package(GLEW REQUIRED)
+target_link_libraries(${PROJECT_NAME} GLEW::GLEW)
 
 # GLFW
 set(GLFW_DIR "${LIB_DIR}/glfw")

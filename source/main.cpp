@@ -1,51 +1,105 @@
-#include <iostream>
-#include <GLFW/glfw3.h>
+//
+//  main.cpp
+//
+//  Copyright © 2018 Alun Evans. All rights reserved.
+//
+#include "includes.h"
+#include "Game.h"
 
+Game* GAME = nullptr;
 
-static void error_callback ( int error, const char* description ) {
-    fprintf ( stderr, "Error: %s\n", description );
+bool glCheckError() {
+    GLenum errCode;
+    if ((errCode = glGetError()) != GL_NO_ERROR) {
+        std::cerr << "OpenGL Error: " << errCode << std::endl;
+        return false;
+    }
+    return true;
 }
 
-static void key_callback ( GLFWwindow* window, int key, int scancode, int action, int mods ) {
-    if ( key == GLFW_KEY_ESCAPE && action == GLFW_PRESS )
-        glfwSetWindowShouldClose ( window, GLFW_TRUE );
+void glfw_error_callback(int error, const char* description) {
+    std::cerr << "GLFW ERROR: code " << error << "; msg: " << description << std::endl;
 }
 
-int main ( int argc, char **argv ) {
-    glfwSetErrorCallback ( error_callback );
-    if ( ! glfwInit() ) {
-        std::cout << "GLFW Initialization failed" << std::endl;
-        return 1;
+
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+{
+    //quit
+    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, 1);
+}
+
+void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
+{
+    if (button == GLFW_MOUSE_BUTTON_LEFT) {
+        std::cout << "Left mouse button down!" << std::endl;
+        //TODO: update game mouse position
     }
-	std::cout << "GLFW Initialization successful" << std::endl;
+}
 
-
-    glfwWindowHint ( GLFW_CONTEXT_VERSION_MINOR, 0 );
-    glfwWindowHint ( GLFW_CONTEXT_VERSION_MAJOR, 2 );
-
-    GLFWwindow* window = glfwCreateWindow ( 640, 480, "Welcome to the MVD!", NULL, NULL );
-    if ( ! window ) {
-        std::cout << "Window Initialization failed" << std::endl;
-        glfwTerminate();
-        return 0;
-    }
-    std::cout << "Window Initialization successful" << std::endl;
-
-    glfwSetKeyCallback ( window, key_callback );
-
-    glfwMakeContextCurrent ( window );
-    glfwSwapInterval ( 1 );
+int main(void)
+{
+    // register the error call-back function before doing anything else
+    glfwSetErrorCallback(glfw_error_callback);
     
-    while ( !glfwWindowShouldClose ( window ) ) {
-        int width, height;
-        glfwGetFramebufferSize ( window, &width, &height );
-        glViewport ( 0, 0, width, height );
+    //create window pointer
+    GLFWwindow* window;
+    
+    // Initialize the library
+    if (!glfwInit())
+        return -1;
+    
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    
+    // Create a windowed mode window and its OpenGL context
+    window = glfwCreateWindow(600, 600, "Hello OpenGL!", NULL, NULL);
+    if (!window)
+    {
+        glfwTerminate();
+        return -1;
+    }
+    
+    // Make the window's context current
+    glfwMakeContextCurrent(window);
+    
+    //initialise GLEW
+    glewExperimental = GL_TRUE;
+    glewInit();
+    
+    //get info about OpenGL version
+    const GLubyte* renderer = glGetString(GL_RENDERER);
+    const GLubyte* version = glGetString(GL_VERSION);
+    std::cout << "Renderer: "<< renderer << "; version: " << version << std::endl;
+    
+    //GLFW input functions
+    glfwSetKeyCallback(window, key_callback);
+    glfwSetMouseButtonCallback(window, mouse_button_callback);
+    glfwSetInputMode(window, GLFW_STICKY_KEYS, 1);
+       
+	//create game singleton and initialise it
+	GAME = new Game();
+	GAME->init();
 
-        glfwSwapBuffers ( window );
-        glfwPollEvents();
+    // Loop until the user closes the window
+    while (!glfwWindowShouldClose(window))
+    {
+		// Poll window events once a frame to get input etc
+		glfwPollEvents();
+
+		//update game
+		GAME->update();
+		glfwSwapBuffers(window);
     }
 
-    glfwDestroyWindow ( window );
+	//free game memory - not necessary but good practice!
+	delete GAME;
+
+    //terminate glfw and exit
     glfwTerminate();
     return 0;
 }
+
+

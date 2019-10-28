@@ -1,4 +1,4 @@
-# Install script for directory: /home/llivol/Documentos/InitGL/libraries/glfw/src
+# Install script for directory: /home/llivol/Documentos/github/InitGL/libraries/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
