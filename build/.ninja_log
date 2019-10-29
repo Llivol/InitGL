@@ -28,3 +28,13 @@
 1284	1483	1572277613	InitGL	9e8d5a9a42e9d0f6
 1	1496	1572277822	CMakeFiles/InitGL.dir/source/main.cpp.o	71280fe0b3d11149
 1496	1797	1572277823	InitGL	9e8d5a9a42e9d0f6
+0	67	1572277953	build.ninja	a811f411580b65ba
+3	544	1572277954	CMakeFiles/InitGL.dir/source/linmath.cpp.o	6b80bfdaa5d81d52
+2	1166	1572277954	CMakeFiles/InitGL.dir/source/Texture.cpp.o	e4689214b1d01f07
+3	1221	1572277954	CMakeFiles/InitGL.dir/source/main.cpp.o	71280fe0b3d11149
+2	1287	1572277954	CMakeFiles/InitGL.dir/source/Game.cpp.o	ac75a904b5b0e7be
+3	1350	1572277954	CMakeFiles/InitGL.dir/source/Shader.cpp.o	8db416ff42899dbc
+1350	1473	1572277955	InitGL	9e8d5a9a42e9d0f6
+4	4004	1572292949	CMakeFiles/InitGL.dir/source/Game.cpp.o	ac75a904b5b0e7be
+3	4416	1572292950	CMakeFiles/InitGL.dir/source/main.cpp.o	71280fe0b3d11149
+4416	4952	1572292950	InitGL	9e8d5a9a42e9d0f6
