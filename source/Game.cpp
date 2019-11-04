@@ -10,9 +10,7 @@ void Game::init() {
 	//set 'background' colour of framebuffer
 	glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
 
-	int pepe = ECS.createComponent<Transform>();
-	int popo = ECS.createComponent<Transform>();
-	int bob = 0;
+		
 }
 
 //Entry point for game update code
