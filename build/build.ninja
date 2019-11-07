@@ -34,7 +34,7 @@ include rules.ninja
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/llivol/Documentos/InitGL/build && /usr/bin/cmake -H/home/llivol/Documentos/InitGL -B/home/llivol/Documentos/InitGL/build
+  COMMAND = cd /home/llivol/Documentos/github/InitGL/build && /usr/bin/cmake -H/home/llivol/Documentos/github/InitGL -B/home/llivol/Documentos/github/InitGL/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -53,6 +53,36 @@ build CMakeFiles/InitGL.dir/source/main.cpp.o: CXX_COMPILER__InitGL ../source/ma
   INCLUDES = -I../source -I../libraries/glfw/include
   OBJECT_DIR = CMakeFiles/InitGL.dir
   OBJECT_FILE_DIR = CMakeFiles/InitGL.dir/source
+build CMakeFiles/InitGL.dir/source/Game.cpp.o: CXX_COMPILER__InitGL ../source/Game.cpp || cmake_object_order_depends_target_InitGL
+  DEP_FILE = CMakeFiles/InitGL.dir/source/Game.cpp.o.d
+  FLAGS = -g   -std=gnu++1z
+  INCLUDES = -I../source -I../libraries/glfw/include
+  OBJECT_DIR = CMakeFiles/InitGL.dir
+  OBJECT_FILE_DIR = CMakeFiles/InitGL.dir/source
+build CMakeFiles/InitGL.dir/source/GraphicsSystem.cpp.o: CXX_COMPILER__InitGL ../source/GraphicsSystem.cpp || cmake_object_order_depends_target_InitGL
+  DEP_FILE = CMakeFiles/InitGL.dir/source/GraphicsSystem.cpp.o.d
+  FLAGS = -g   -std=gnu++1z
+  INCLUDES = -I../source -I../libraries/glfw/include
+  OBJECT_DIR = CMakeFiles/InitGL.dir
+  OBJECT_FILE_DIR = CMakeFiles/InitGL.dir/source
+build CMakeFiles/InitGL.dir/source/linmath.cpp.o: CXX_COMPILER__InitGL ../source/linmath.cpp || cmake_object_order_depends_target_InitGL
+  DEP_FILE = CMakeFiles/InitGL.dir/source/linmath.cpp.o.d
+  FLAGS = -g   -std=gnu++1z
+  INCLUDES = -I../source -I../libraries/glfw/include
+  OBJECT_DIR = CMakeFiles/InitGL.dir
+  OBJECT_FILE_DIR = CMakeFiles/InitGL.dir/source
+build CMakeFiles/InitGL.dir/source/Shader.cpp.o: CXX_COMPILER__InitGL ../source/Shader.cpp || cmake_object_order_depends_target_InitGL
+  DEP_FILE = CMakeFiles/InitGL.dir/source/Shader.cpp.o.d
+  FLAGS = -g   -std=gnu++1z
+  INCLUDES = -I../source -I../libraries/glfw/include
+  OBJECT_DIR = CMakeFiles/InitGL.dir
+  OBJECT_FILE_DIR = CMakeFiles/InitGL.dir/source
+build CMakeFiles/InitGL.dir/source/Texture.cpp.o: CXX_COMPILER__InitGL ../source/Texture.cpp || cmake_object_order_depends_target_InitGL
+  DEP_FILE = CMakeFiles/InitGL.dir/source/Texture.cpp.o.d
+  FLAGS = -g   -std=gnu++1z
+  INCLUDES = -I../source -I../libraries/glfw/include
+  OBJECT_DIR = CMakeFiles/InitGL.dir
+  OBJECT_FILE_DIR = CMakeFiles/InitGL.dir/source
 
 # =============================================================================
 # Link build statements for EXECUTABLE target InitGL
@@ -61,10 +91,10 @@ build CMakeFiles/InitGL.dir/source/main.cpp.o: CXX_COMPILER__InitGL ../source/ma
 #############################################
 # Link the executable InitGL
 
-build InitGL: CXX_EXECUTABLE_LINKER__InitGL CMakeFiles/InitGL.dir/source/main.cpp.o | /usr/lib/x86_64-linux-gnu/libGL.so libraries/glfw/src/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.so /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libX11.so || libraries/glfw/src/libglfw3.a
+build InitGL: CXX_EXECUTABLE_LINKER__InitGL CMakeFiles/InitGL.dir/source/main.cpp.o CMakeFiles/InitGL.dir/source/Game.cpp.o CMakeFiles/InitGL.dir/source/GraphicsSystem.cpp.o CMakeFiles/InitGL.dir/source/linmath.cpp.o CMakeFiles/InitGL.dir/source/Shader.cpp.o CMakeFiles/InitGL.dir/source/Texture.cpp.o | /usr/lib/x86_64-linux-gnu/libGL.so /usr/lib/x86_64-linux-gnu/libGLEW.so libraries/glfw/src/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.so /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libX11.so || libraries/glfw/src/libglfw3.a
   FLAGS = -g
   LINK_FLAGS = -rdynamic
-  LINK_LIBRARIES = -lGL libraries/glfw/src/libglfw3.a -lrt -lm -ldl -lX11 -lpthread
+  LINK_LIBRARIES = -lGL /usr/lib/x86_64-linux-gnu/libGLEW.so libraries/glfw/src/libglfw3.a -lrt -lm -ldl -lX11 -lpthread
   OBJECT_DIR = CMakeFiles/InitGL.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -75,13 +105,13 @@ build InitGL: CXX_EXECUTABLE_LINKER__InitGL CMakeFiles/InitGL.dir/source/main.cp
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/llivol/Documentos/InitGL/build && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/llivol/Documentos/github/InitGL/build && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 build edit_cache: phony CMakeFiles/edit_cache.util
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/llivol/Documentos/InitGL/CMakeLists.txt
+# /home/llivol/Documentos/github/InitGL/CMakeLists.txt
 # =============================================================================
 
 
@@ -89,7 +119,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build libraries/glfw/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/llivol/Documentos/InitGL/build/libraries/glfw && /usr/bin/cmake -H/home/llivol/Documentos/InitGL -B/home/llivol/Documentos/InitGL/build
+  COMMAND = cd /home/llivol/Documentos/github/InitGL/build/libraries/glfw && /usr/bin/cmake -H/home/llivol/Documentos/github/InitGL -B/home/llivol/Documentos/github/InitGL/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -99,13 +129,13 @@ build libraries/glfw/rebuild_cache: phony libraries/glfw/CMakeFiles/rebuild_cach
 # Utility command for edit_cache
 
 build libraries/glfw/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/llivol/Documentos/InitGL/build/libraries/glfw && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/llivol/Documentos/github/InitGL/build/libraries/glfw && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 build libraries/glfw/edit_cache: phony libraries/glfw/CMakeFiles/edit_cache.util
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/llivol/Documentos/InitGL/libraries/glfw/CMakeLists.txt
+# /home/llivol/Documentos/github/InitGL/libraries/glfw/CMakeLists.txt
 # =============================================================================
 
 
@@ -113,7 +143,7 @@ build libraries/glfw/edit_cache: phony libraries/glfw/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build libraries/glfw/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/llivol/Documentos/InitGL/build/libraries/glfw/src && /usr/bin/cmake -H/home/llivol/Documentos/InitGL -B/home/llivol/Documentos/InitGL/build
+  COMMAND = cd /home/llivol/Documentos/github/InitGL/build/libraries/glfw/src && /usr/bin/cmake -H/home/llivol/Documentos/github/InitGL -B/home/llivol/Documentos/github/InitGL/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -258,7 +288,7 @@ build libraries/glfw/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw libraries/glf
 # Utility command for edit_cache
 
 build libraries/glfw/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/llivol/Documentos/InitGL/build/libraries/glfw/src && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/llivol/Documentos/github/InitGL/build/libraries/glfw/src && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 build libraries/glfw/src/edit_cache: phony libraries/glfw/src/CMakeFiles/edit_cache.util
@@ -274,13 +304,13 @@ build libglfw3.a: phony libraries/glfw/src/libglfw3.a
 # =============================================================================
 
 #############################################
-# Folder: /home/llivol/Documentos/InitGL/build/libraries/glfw
+# Folder: /home/llivol/Documentos/github/InitGL/build/libraries/glfw
 
 build  libraries/glfw/all: phony libraries/glfw/src/all
 # =============================================================================
 
 #############################################
-# Folder: /home/llivol/Documentos/InitGL/build/libraries/glfw/src
+# Folder: /home/llivol/Documentos/github/InitGL/build/libraries/glfw/src
 
 build  libraries/glfw/src/all: phony glfw
 # =============================================================================
@@ -305,13 +335,13 @@ default all
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../libraries/glfw/CMakeLists.txt ../libraries/glfw/src/CMakeLists.txt ../libraries/glfw/src/glfw3.pc.in ../libraries/glfw/src/glfw3Config.cmake.in ../libraries/glfw/src/glfw_config.h.in /usr/share/cmake-3.10/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /usr/share/cmake-3.10/Modules/CMakeCInformation.cmake /usr/share/cmake-3.10/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.10/Modules/CMakeDependentOption.cmake /usr/share/cmake-3.10/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.10/Modules/CMakePackageConfigHelpers.cmake /usr/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.10/Modules/CheckFunctionExists.cmake /usr/share/cmake-3.10/Modules/CheckIncludeFile.cmake /usr/share/cmake-3.10/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.10/Modules/CheckSymbolExists.cmake /usr/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.10/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.10/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.10/Modules/Compiler/GNU.cmake /usr/share/cmake-3.10/Modules/FindOpenGL.cmake /usr/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.10/Modules/FindPackageMessage.cmake /usr/share/cmake-3.10/Modules/FindThreads.cmake /usr/share/cmake-3.10/Modules/FindX11.cmake /usr/share/cmake-3.10/Modules/GNUInstallDirs.cmake /usr/share/cmake-3.10/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.10/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.10/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.10/Modules/Platform/Linux.cmake /usr/share/cmake-3.10/Modules/Platform/UnixPaths.cmake /usr/share/cmake-3.10/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.10.2/CMakeCCompiler.cmake CMakeFiles/3.10.2/CMakeCXXCompiler.cmake CMakeFiles/3.10.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../libraries/glfw/CMakeLists.txt ../libraries/glfw/src/CMakeLists.txt ../libraries/glfw/src/glfw3.pc.in ../libraries/glfw/src/glfw3Config.cmake.in ../libraries/glfw/src/glfw_config.h.in /usr/share/cmake-3.10/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /usr/share/cmake-3.10/Modules/CMakeCInformation.cmake /usr/share/cmake-3.10/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.10/Modules/CMakeDependentOption.cmake /usr/share/cmake-3.10/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.10/Modules/CMakePackageConfigHelpers.cmake /usr/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.10/Modules/CheckFunctionExists.cmake /usr/share/cmake-3.10/Modules/CheckIncludeFile.cmake /usr/share/cmake-3.10/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.10/Modules/CheckSymbolExists.cmake /usr/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.10/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.10/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.10/Modules/Compiler/GNU.cmake /usr/share/cmake-3.10/Modules/FindGLEW.cmake /usr/share/cmake-3.10/Modules/FindOpenGL.cmake /usr/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.10/Modules/FindPackageMessage.cmake /usr/share/cmake-3.10/Modules/FindThreads.cmake /usr/share/cmake-3.10/Modules/FindX11.cmake /usr/share/cmake-3.10/Modules/GNUInstallDirs.cmake /usr/share/cmake-3.10/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.10/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.10/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.10/Modules/Platform/Linux.cmake /usr/share/cmake-3.10/Modules/Platform/UnixPaths.cmake /usr/share/cmake-3.10/Modules/SelectLibraryConfigurations.cmake /usr/share/cmake-3.10/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.10.2/CMakeCCompiler.cmake CMakeFiles/3.10.2/CMakeCXXCompiler.cmake CMakeFiles/3.10.2/CMakeSystem.cmake
   pool = console
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../libraries/glfw/CMakeLists.txt ../libraries/glfw/src/CMakeLists.txt ../libraries/glfw/src/glfw3.pc.in ../libraries/glfw/src/glfw3Config.cmake.in ../libraries/glfw/src/glfw_config.h.in /usr/share/cmake-3.10/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /usr/share/cmake-3.10/Modules/CMakeCInformation.cmake /usr/share/cmake-3.10/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.10/Modules/CMakeDependentOption.cmake /usr/share/cmake-3.10/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.10/Modules/CMakePackageConfigHelpers.cmake /usr/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.10/Modules/CheckFunctionExists.cmake /usr/share/cmake-3.10/Modules/CheckIncludeFile.cmake /usr/share/cmake-3.10/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.10/Modules/CheckSymbolExists.cmake /usr/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.10/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.10/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.10/Modules/Compiler/GNU.cmake /usr/share/cmake-3.10/Modules/FindOpenGL.cmake /usr/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.10/Modules/FindPackageMessage.cmake /usr/share/cmake-3.10/Modules/FindThreads.cmake /usr/share/cmake-3.10/Modules/FindX11.cmake /usr/share/cmake-3.10/Modules/GNUInstallDirs.cmake /usr/share/cmake-3.10/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.10/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.10/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.10/Modules/Platform/Linux.cmake /usr/share/cmake-3.10/Modules/Platform/UnixPaths.cmake /usr/share/cmake-3.10/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.10.2/CMakeCCompiler.cmake CMakeFiles/3.10.2/CMakeCXXCompiler.cmake CMakeFiles/3.10.2/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../libraries/glfw/CMakeLists.txt ../libraries/glfw/src/CMakeLists.txt ../libraries/glfw/src/glfw3.pc.in ../libraries/glfw/src/glfw3Config.cmake.in ../libraries/glfw/src/glfw_config.h.in /usr/share/cmake-3.10/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /usr/share/cmake-3.10/Modules/CMakeCInformation.cmake /usr/share/cmake-3.10/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.10/Modules/CMakeDependentOption.cmake /usr/share/cmake-3.10/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.10/Modules/CMakePackageConfigHelpers.cmake /usr/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.10/Modules/CheckFunctionExists.cmake /usr/share/cmake-3.10/Modules/CheckIncludeFile.cmake /usr/share/cmake-3.10/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.10/Modules/CheckSymbolExists.cmake /usr/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.10/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.10/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.10/Modules/Compiler/GNU.cmake /usr/share/cmake-3.10/Modules/FindGLEW.cmake /usr/share/cmake-3.10/Modules/FindOpenGL.cmake /usr/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.10/Modules/FindPackageMessage.cmake /usr/share/cmake-3.10/Modules/FindThreads.cmake /usr/share/cmake-3.10/Modules/FindX11.cmake /usr/share/cmake-3.10/Modules/GNUInstallDirs.cmake /usr/share/cmake-3.10/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.10/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.10/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.10/Modules/Platform/Linux.cmake /usr/share/cmake-3.10/Modules/Platform/UnixPaths.cmake /usr/share/cmake-3.10/Modules/SelectLibraryConfigurations.cmake /usr/share/cmake-3.10/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.10.2/CMakeCCompiler.cmake CMakeFiles/3.10.2/CMakeCXXCompiler.cmake CMakeFiles/3.10.2/CMakeSystem.cmake: phony
 
 #############################################
 # Clean all the built files.

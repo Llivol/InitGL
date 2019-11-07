@@ -1,4 +1,4 @@
-The system is: Linux - 5.0.0-31-generic - x86_64
+The system is: Linux - 5.0.0-32-generic - x86_64
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/g++-7 
 Build flags: 
@@ -10,22 +10,22 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/llivol/Documentos/InitGL/build/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/llivol/Documentos/github/InitGL/build/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
 
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_caada"
-[1/2] Building CXX object CMakeFiles/cmTC_caada.dir/testCXXCompiler.cxx.o
-[2/2] Linking CXX executable cmTC_caada
+Run Build Command:"/usr/bin/ninja" "cmTC_f31ba"
+[1/2] Building CXX object CMakeFiles/cmTC_f31ba.dir/testCXXCompiler.cxx.o
+[2/2] Linking CXX executable cmTC_f31ba
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_5fd16"
-[1/2] Building CXX object CMakeFiles/cmTC_5fd16.dir/CMakeCXXCompilerABI.cpp.o
-[2/2] Linking CXX executable cmTC_5fd16
+Run Build Command:"/usr/bin/ninja" "cmTC_34af3"
+[1/2] Building CXX object CMakeFiles/cmTC_34af3.dir/CMakeCXXCompilerABI.cpp.o
+[2/2] Linking CXX executable cmTC_34af3
 Using built-in specs.
 COLLECT_GCC=/usr/bin/g++-7
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -37,18 +37,18 @@ Thread model: posix
 gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_5fd16' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccx2Wjm7.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5fd16 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_5fd16.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_5fd16' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_34af3' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKSwHE1.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_34af3 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_34af3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_34af3' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_5fd16"]
-  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_5fd16.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [[2/2] Linking CXX executable cmTC_5fd16]
+  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_34af3"]
+  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_34af3.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [[2/2] Linking CXX executable cmTC_34af3]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/g++-7]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -60,13 +60,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_5fd16' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccx2Wjm7.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5fd16 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_5fd16.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_34af3' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKSwHE1.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_34af3 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_34af3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccx2Wjm7.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccKSwHE1.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -86,7 +86,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_5fd16] ==> ignore
+    arg [cmTC_34af3] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -98,7 +98,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_5fd16.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_34af3.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -124,11 +124,11 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_333c5"
-[1/2] Building CXX object CMakeFiles/cmTC_333c5.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_333c5
+Run Build Command:"/usr/bin/ninja" "cmTC_e98ae"
+[1/2] Building CXX object CMakeFiles/cmTC_e98ae.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_e98ae
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -191,11 +191,11 @@ Run Build Command:"/usr/bin/ninja" "cmTC_333c5"
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_676c4"
-[1/2] Building CXX object CMakeFiles/cmTC_676c4.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_676c4
+Run Build Command:"/usr/bin/ninja" "cmTC_b0630"
+[1/2] Building CXX object CMakeFiles/cmTC_b0630.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_b0630
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -258,11 +258,11 @@ Run Build Command:"/usr/bin/ninja" "cmTC_676c4"
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_e19ec"
-[1/2] Building CXX object CMakeFiles/cmTC_e19ec.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_e19ec
+Run Build Command:"/usr/bin/ninja" "cmTC_fcd55"
+[1/2] Building CXX object CMakeFiles/cmTC_fcd55.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_fcd55
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -325,11 +325,11 @@ Run Build Command:"/usr/bin/ninja" "cmTC_e19ec"
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_9be89"
-[1/2] Building CXX object CMakeFiles/cmTC_9be89.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_9be89
+Run Build Command:"/usr/bin/ninja" "cmTC_d313d"
+[1/2] Building CXX object CMakeFiles/cmTC_d313d.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_d313d
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -400,22 +400,22 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/llivol/Documentos/InitGL/build/CMakeFiles/3.10.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/llivol/Documentos/github/InitGL/build/CMakeFiles/3.10.2/CompilerIdC/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_ded35"
-[1/2] Building C object CMakeFiles/cmTC_ded35.dir/testCCompiler.c.o
-[2/2] Linking C executable cmTC_ded35
+Run Build Command:"/usr/bin/ninja" "cmTC_ace3a"
+[1/2] Building C object CMakeFiles/cmTC_ace3a.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_ace3a
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_676cd"
-[1/2] Building C object CMakeFiles/cmTC_676cd.dir/CMakeCCompilerABI.c.o
-[2/2] Linking C executable cmTC_676cd
+Run Build Command:"/usr/bin/ninja" "cmTC_05532"
+[1/2] Building C object CMakeFiles/cmTC_05532.dir/CMakeCCompilerABI.c.o
+[2/2] Linking C executable cmTC_05532
 Using built-in specs.
 COLLECT_GCC=/usr/bin/gcc-7
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -427,18 +427,18 @@ Thread model: posix
 gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_676cd' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cchVe5Ob.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_676cd /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_676cd.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_676cd' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_05532' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNAElMB.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_05532 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_05532.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_05532' '-mtune=generic' '-march=x86-64'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_676cd"]
-  ignore line: [[1/2] Building C object CMakeFiles/cmTC_676cd.dir/CMakeCCompilerABI.c.o]
-  ignore line: [[2/2] Linking C executable cmTC_676cd]
+  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_05532"]
+  ignore line: [[1/2] Building C object CMakeFiles/cmTC_05532.dir/CMakeCCompilerABI.c.o]
+  ignore line: [[2/2] Linking C executable cmTC_05532]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/gcc-7]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -450,13 +450,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_676cd' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cchVe5Ob.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_676cd /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_676cd.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_05532' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNAElMB.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_05532 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_05532.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cchVe5Ob.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccNAElMB.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -476,7 +476,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_676cd] ==> ignore
+    arg [cmTC_05532] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -488,7 +488,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_676cd.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_05532.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -518,11 +518,11 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_a5592"
-[1/2] Building C object CMakeFiles/cmTC_a5592.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_a5592
+Run Build Command:"/usr/bin/ninja" "cmTC_447e0"
+[1/2] Building C object CMakeFiles/cmTC_447e0.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_447e0
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -532,11 +532,11 @@ Run Build Command:"/usr/bin/ninja" "cmTC_a5592"
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_48ed5"
-[1/2] Building C object CMakeFiles/cmTC_48ed5.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_48ed5
+Run Build Command:"/usr/bin/ninja" "cmTC_5c23c"
+[1/2] Building C object CMakeFiles/cmTC_5c23c.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_5c23c
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -546,11 +546,11 @@ Run Build Command:"/usr/bin/ninja" "cmTC_48ed5"
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_1d6c9"
-[1/2] Building C object CMakeFiles/cmTC_1d6c9.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_1d6c9
+Run Build Command:"/usr/bin/ninja" "cmTC_d89bc"
+[1/2] Building C object CMakeFiles/cmTC_d89bc.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_d89bc
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -558,66 +558,66 @@ Run Build Command:"/usr/bin/ninja" "cmTC_1d6c9"
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the include file pthread.h exists passed with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_3a444"
-[1/2] Building C object CMakeFiles/cmTC_3a444.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_3a444
+Run Build Command:"/usr/bin/ninja" "cmTC_4a23d"
+[1/2] Building C object CMakeFiles/cmTC_4a23d.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_4a23d
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_0c081"
-[1/2] Building C object CMakeFiles/cmTC_0c081.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_0c081
+Run Build Command:"/usr/bin/ninja" "cmTC_e8c45"
+[1/2] Building C object CMakeFiles/cmTC_e8c45.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_e8c45
 
 
 Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_9f4ea"
-[1/2] Building C object CMakeFiles/cmTC_9f4ea.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_9f4ea
+Run Build Command:"/usr/bin/ninja" "cmTC_97857"
+[1/2] Building C object CMakeFiles/cmTC_97857.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_97857
 
 
 Determining if the function gethostbyname exists passed with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_1d526"
-[1/2] Building C object CMakeFiles/cmTC_1d526.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_1d526
+Run Build Command:"/usr/bin/ninja" "cmTC_dd91a"
+[1/2] Building C object CMakeFiles/cmTC_dd91a.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_dd91a
 
 
 Determining if the function connect exists passed with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_7e184"
-[1/2] Building C object CMakeFiles/cmTC_7e184.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_7e184
+Run Build Command:"/usr/bin/ninja" "cmTC_19964"
+[1/2] Building C object CMakeFiles/cmTC_19964.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_19964
 
 
 Determining if the function remove exists passed with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_606ee"
-[1/2] Building C object CMakeFiles/cmTC_606ee.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_606ee
+Run Build Command:"/usr/bin/ninja" "cmTC_24ef3"
+[1/2] Building C object CMakeFiles/cmTC_24ef3.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_24ef3
 
 
 Determining if the function shmat exists passed with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_7ede1"
-[1/2] Building C object CMakeFiles/cmTC_7ede1.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_7ede1
+Run Build Command:"/usr/bin/ninja" "cmTC_3a333"
+[1/2] Building C object CMakeFiles/cmTC_3a333.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_3a333
 
 
 Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
-Change Dir: /home/llivol/Documentos/InitGL/build/CMakeFiles/CMakeTmp
+Change Dir: /home/llivol/Documentos/github/InitGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_e04b0"
-[1/2] Building C object CMakeFiles/cmTC_e04b0.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_e04b0
+Run Build Command:"/usr/bin/ninja" "cmTC_015e8"
+[1/2] Building C object CMakeFiles/cmTC_015e8.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_015e8
 
 
