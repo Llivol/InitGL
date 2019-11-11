@@ -8,6 +8,11 @@ set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries")
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/source")
 set(SOURCES
 	"${SRC_DIR}/main.cpp"
+	"${SRC_DIR}/Game.cpp"
+	"${SRC_DIR}/GraphicsSystem.cpp"
+	"${SRC_DIR}/linmath.cpp"
+	"${SRC_DIR}/Parsers.cpp"
+	"${SRC_DIR}/Shader.cpp"
 	)
 
 # C++ Version
