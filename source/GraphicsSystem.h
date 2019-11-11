@@ -57,6 +57,7 @@ private:
 	std::unordered_map<std::string, Shader*> shaders_;
     std::vector<Geometry> geometries_;
     std::vector<Material> materials_;
+    int frame_count_;
 
 	//rendering
     void renderMeshComponent_(Mesh& comp);

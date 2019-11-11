@@ -23,6 +23,8 @@ void GraphicsSystem::init() {
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
     glCullFace(GL_BACK);
+    
+    frame_count_ = 0;
 }
 
 void GraphicsSystem::update(float dt) {
@@ -59,6 +61,8 @@ void GraphicsSystem::update(float dt) {
 //renders a given mesh component
 void GraphicsSystem::renderMeshComponent_(Mesh& comp) {
 
+    frame_count_++;
+
     //get transform of components entity
     Transform& transform = ECS.getComponentFromEntity<Transform>(comp.owner);
 
@@ -71,13 +75,23 @@ void GraphicsSystem::renderMeshComponent_(Mesh& comp) {
 	// - replace hard coded matrix data below, with matrices of camera component
 	// - change camera position to send to u_cam_pos uniform
 
-	lm::vec3 cam_position(0.0f, 0.0f, 3.0f);
-	lm::vec3 cam_target(0.0f, 0.0f, 0.0f);
-	lm::vec3 cam_up(0.0f, 1.0f, 0.0f);
-	lm::mat4 view_matrix, projection_matrix, view_projection;
-	view_matrix.lookAt(cam_position, cam_target, cam_up);
-	projection_matrix.perspective(60.0f*DEG2RAD, 1, 0.01f, 100.0f);
-	view_projection = projection_matrix * view_matrix;
+	// lm::vec3 cam_position(0.0f, 0.0f, 3.0f);
+	// lm::vec3 cam_target(0.0f, 0.0f, 0.0f);
+	// lm::vec3 cam_up(0.0f, 1.0f, 0.0f);
+	// lm::mat4 view_matrix, projection_matrix, view_projection;
+	// view_matrix.lookAt(cam_position, cam_target, cam_up);
+	// projection_matrix.perspective(60.0f*DEG2RAD, 1, 0.01f, 100.0f);
+	// view_projection = projection_matrix * view_matrix;
+
+    if (frame_count_ >= 120)
+    {
+        ECS.main_camera = (ECS.main_camera + 1) % 2;
+        frame_count_ = 0;
+    }
+
+    Camera& cam = ECS.getAllComponents<Camera>()[ECS.main_camera];
+    cam.update();
+
 
     //model matrix
     lm::mat4 model_matrix = transform.getGlobalMatrix(ECS.getAllComponents<Transform>());
@@ -88,7 +102,7 @@ void GraphicsSystem::renderMeshComponent_(Mesh& comp) {
 	normal_matrix.transpose();
 
     //Model view projection matrix
-    lm::mat4 mvp_matrix = view_projection * model_matrix;
+    lm::mat4 mvp_matrix = cam.view_projection * model_matrix;
 
     //transform uniforms
     GLint u_mvp = glGetUniformLocation(current_program_, "u_mvp");
@@ -102,7 +116,7 @@ void GraphicsSystem::renderMeshComponent_(Mesh& comp) {
 
 	//TODO: 
     GLint u_cam_pos = glGetUniformLocation(current_program_, "u_cam_pos");
-    if (u_cam_pos != -1) glUniform3fv(u_cam_pos, 1, cam_position.value_); // ...3fv - is array of 3 floats
+    if (u_cam_pos != -1) glUniform3fv(u_cam_pos, 1, cam.position.value_); // ...3fv - is array of 3 floats
 
     //material uniforms
     GLint u_diffuse = glGetUniformLocation(current_program_, "u_diffuse");
@@ -125,17 +139,34 @@ void GraphicsSystem::renderMeshComponent_(Mesh& comp) {
 	// - look at fragment shader to understand new lighting code
 	// - modify light code to read light information from Light components in ECS
 
+    auto& all_lights = ECS.getAllComponents<Light>();
+
 	//tell shader how many lights there
 	GLint u_num_lights = glGetUniformLocation(current_program_, "u_num_lights"); //get/set uniform in shader
-	if (u_num_lights != -1) glUniform1i(u_num_lights, 1);
+	if (u_num_lights != -1) glUniform1i(u_num_lights, all_lights.size());
+
+    for ( int i = 0; i < all_lights.size(); i++ )
+    {
+        Transform& light_transform = 
+            ECS.getComponentFromEntity<Transform>(all_lights[i].owner);
+
+        std::string light_position_name = "lights[" + std::to_string(i) + "].position";
+        GLint u_light_pos = glGetUniformLocation(current_program_, light_position_name.c_str()); //find it
+        if (u_light_pos != -1) glUniform3fv(u_light_pos, 1, light_transform.position().value_); // light position        
+
+        std::string light_color_name = "lights[" + std::to_string(i) + "].color";
+        GLint u_light_col = glGetUniformLocation(current_program_, light_color_name.c_str());
+        if (u_light_col != -1) glUniform3fv(u_light_col, 1, all_lights[i].color.value_);
+
+    }
 	//position
-	std::string light_position_name = "lights[0].position"; // uniform name
-	GLint u_light_pos = glGetUniformLocation(current_program_, light_position_name.c_str()); //find it
-	if (u_light_pos != -1) glUniform3fv(u_light_pos, 1, lm::vec3(1000.0,0.0,1000.0).value_); // light position
-	//color
-	std::string light_color_name = "lights[0].color";
-	GLint u_light_col = glGetUniformLocation(current_program_, light_color_name.c_str());
-	if (u_light_col != -1) glUniform3fv(u_light_col, 1, lm::vec3(1.0, 1.0, 1.0).value_);
+	// std::string light_position_name = "lights[0].position"; // uniform name
+	// GLint u_light_pos = glGetUniformLocation(current_program_, light_position_name.c_str()); //find it
+	// if (u_light_pos != -1) glUniform3fv(u_light_pos, 1, lm::vec3(1000.0,0.0,1000.0).value_); // light position
+	// //color
+	// std::string light_color_name = "lights[0].color";
+	// GLint u_light_col = glGetUniformLocation(current_program_, light_color_name.c_str());
+	// if (u_light_col != -1) glUniform3fv(u_light_col, 1, lm::vec3(1.0, 1.0, 1.0).value_);
 
 
 
