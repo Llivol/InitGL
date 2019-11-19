@@ -26,8 +26,8 @@ void Game::init()
 	graphics_system_.loadShader("phong", "data/shaders/phong.vert", "data/shaders/phong.frag");
 
 	//geometries
-	//int teapot_geom_id = graphics_system_.createGeometryFromFile("data/assets/teapot_small.obj");
-	int teapot_geom_id = graphics_system_.createPlaneGeometry();
+	int teapot_geom_id = graphics_system_.createGeometryFromFile("data/assets/teapot_small.obj");
+	// int teapot_geom_id = graphics_system_.createPlaneGeometry();
 
 	//materials and textures
 	int default_mat_id = graphics_system_.createMaterial();

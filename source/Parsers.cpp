@@ -11,9 +11,147 @@ void split(std::string to_split, std::string delim, std::vector<std::string>& re
 //parses a wavefront object into passed arrays
 bool Parsers::parseOBJ(std::string filename, std::vector<float>& vertices, std::vector<float>& uvs, std::vector<float>& normals, std::vector<unsigned int>& indices) {
 
-    //obj parser goes here
+    std::vector<lm::vec3> aux_vert;
+    std::vector<lm::vec2> aux_uvs;
+    std::vector<lm::vec3> aux_norm;
+	std::unordered_map<std::string, int> index_map;
+
+	std::ifstream in(filename, std::ios::in);
+
+	if (!in)
+	{
+		std::cerr << "Cannot open " << filename << std::endl;
+		return false;
+	}
     
-    return false;
+	std::string line;
+
+	while (getline(in, line))
+	{
+		char delimiter = ' ';
+		int pos = 0;
+		std::vector<std::string> tokens;
+        line.push_back(delimiter);
+
+		while ((pos = line.find(delimiter)) != std::string::npos) {
+			tokens.push_back(line.substr(0, pos));
+			line.erase(0, pos + 1);
+		}
+
+		if (tokens.empty()) continue;
+        		
+        if (tokens[0].compare("v") == 0) 
+        {
+			lm::vec3 vertex;
+			vertex.x = std::stof(tokens[1]);
+			vertex.y = std::stof(tokens[2]);
+			vertex.z = std::stof(tokens[3]);
+
+			aux_vert.push_back(vertex);
+		}
+		else if (tokens[0].compare("vt") == 0) 
+        {
+			lm::vec2 uv;
+			uv.x = std::stof(tokens[1]);
+			uv.y = std::stof(tokens[2]);
+
+			aux_uvs.push_back(uv);
+		}
+		else if (tokens[0].compare("vn") == 0) 
+        {
+			lm::vec3 normal;
+			normal.x = std::stof(tokens[1]);
+			normal.y = std::stof(tokens[2]);
+			normal.z = std::stof(tokens[3]);
+
+			aux_norm.push_back(normal);
+		}
+		else if (tokens[0].compare("f") == 0) 
+        {
+            int size = tokens.size();    
+			for (int i = 1; i < 4; i++) 
+            {
+				std::vector<std::string> faces_tokens;
+				std::string aux = tokens[i];
+
+				char delimiter = '/';
+				int pos = 0;
+                aux.push_back(delimiter);
+
+				while ((pos = aux.find(delimiter)) != std::string::npos) 
+                {
+					faces_tokens.push_back(aux.substr(0, pos));
+					aux.erase(0, pos + 1);
+				}
+                
+                if (index_map.count(tokens[i]) == 0)
+                {
+                    index_map.insert(std::make_pair(tokens[i], index_map.size()));
+
+                    lm::vec3 cur_vert = aux_vert[std::stoi(faces_tokens[0])];
+                    vertices.push_back(cur_vert.x);
+                    vertices.push_back(cur_vert.y);
+                    vertices.push_back(cur_vert.z);
+
+                    lm::vec2 cur_uv = aux_uvs[std::stoi(faces_tokens[1])];
+                    uvs.push_back(cur_uv.x);
+                    uvs.push_back(cur_uv.y);
+
+                    lm::vec3 cur_norm = aux_norm[std::stoi(faces_tokens[2])];
+                    normals.push_back(cur_norm.x);
+                    normals.push_back(cur_norm.y);
+                    normals.push_back(cur_norm.z);
+                }
+
+                indices.push_back(index_map[tokens[i]]);
+			}
+
+            if ( size == 5 )
+            {
+                for ( int i = 1; i < 5; i++ )
+                {
+                    if ( i == 2 ) continue;
+
+                    std::vector<std::string> face_tokens;
+                    std::string aux = tokens[i];
+
+                    char delimiter = '/';
+                    int pos = 0;
+                    aux.push_back(delimiter);
+
+                    while ((pos = aux.find(delimiter)) != std::string::npos) 
+                    {
+                        face_tokens.push_back(aux.substr(0, pos));
+                        aux.erase(0, pos + 1);
+                    }
+                    
+                    if (index_map.count(tokens[i]) == 0)
+                    {
+
+                        index_map.insert(std::make_pair(tokens[i], index_map.size()));
+
+                        lm::vec3 cur_vert = aux_vert[std::stoi(face_tokens[0])];
+                        vertices.push_back(cur_vert.x);
+                        vertices.push_back(cur_vert.y);
+                        vertices.push_back(cur_vert.z);
+
+                        lm::vec2 cur_uv = aux_uvs[std::stoi(face_tokens[1])];
+                        uvs.push_back(cur_uv.x);
+                        uvs.push_back(cur_uv.y);
+
+                        lm::vec3 cur_norm = aux_norm[std::stoi(face_tokens[2])];
+                        normals.push_back(cur_norm.x);
+                        normals.push_back(cur_norm.y);
+                        normals.push_back(cur_norm.z);
+                    }
+
+                    indices.push_back(index_map[tokens[i]]);
+                }
+            }
+		}
+	}
+
+    return true;
 }
 
 // load uncompressed RGB targa file into an OpenGL texture
